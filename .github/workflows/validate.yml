@@ -16,7 +16,5 @@ jobs:
           path: |
             ~/.platformio
           key: ${{ runner.os }}-pio
-      - name: PlatformIO build
-        uses: nicholasjng/platformio-action@v1
-        with:
-          command: run
+      - run: pip install platformio
+      - run: pio run
